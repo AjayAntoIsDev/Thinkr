@@ -8,11 +8,23 @@ import { Question2 } from '@/questions/Question2.tsx';
 import { Question3 } from '@/questions/Question3.tsx';
 import { Question4 } from '@/questions/Question4.tsx';
 import { useRef } from 'react';
+import { Question5 } from '@/questions/Question5.tsx';
+import { Question6 } from '@/questions/Question6.tsx';
+import { Question7 } from '@/questions/Question7.tsx';
+
+let questions: { [key: string]: string } = {
+  question1: '',
+  question2: '',
+  question3: '',
+  question4: '',
+  question5: '',
+  question6: '',
+  question7: '',
+};
 
 const App = () => {
 
   const swiperRef = useRef(null);
-
   return (
     <div className={'flex h-screen w-screen flex-col bg-surface-a0 text-white'}>
       <div className={'absolute left-0 right-0'}>
@@ -44,16 +56,25 @@ const App = () => {
           }}
         >
           <SwiperSlide>
-            <Question1 swiperRef={swiperRef} />
+            <Question1 swiperRef={swiperRef} questions={questions}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Question2 swiperRef={swiperRef} />
+            <Question2 swiperRef={swiperRef} questions={questions}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Question3 swiperRef={swiperRef} />
+            <Question3 swiperRef={swiperRef} questions={questions}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Question4 swiperRef={swiperRef} />
+            <Question4 swiperRef={swiperRef} questions={questions}/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Question5 swiperRef={swiperRef} questions={questions}/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Question6 swiperRef={swiperRef} questions={questions}/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Question7 swiperRef={swiperRef} questions={questions}/>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -62,5 +83,3 @@ const App = () => {
 };
 
 export default App;
-
-
