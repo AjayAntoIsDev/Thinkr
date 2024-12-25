@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 
 // @ts-ignore
-export const Question1 = ({ swiperRef }) => {
+export const Question2 = ({ swiperRef }) => {
   const goToNextSlide = () => {
     if (swiperRef.current) {
       swiperRef.current.slideNext();
@@ -10,12 +10,12 @@ export const Question1 = ({ swiperRef }) => {
 
   return (
     <div className="flex h-full flex-col items-center justify-center text-center">
-      <h1 className="text-5xl font-bold">
-        I’m interested in{' '}
+      <h1 className="text-5xl font-bold w-screen">
+        I want to work on a project that’s{' '}
         <input
           type="text"
-          placeholder="technology, art, fashion, etc."
-          className="blinking-underline w-[57.7vw] border-b-[6px] border-surface-tonal-a50 bg-transparent text-white !underline-offset-8 placeholder:text-surface-tonal-a50 focus:outline-none"
+          placeholder="fun, practical, etc."
+          className="blinking-underline border-b-[6px] border-surface-tonal-a50 bg-transparent text-white !underline-offset-8 placeholder:text-surface-tonal-a50 focus:outline-none w-max"
         />
       </h1>
       <button

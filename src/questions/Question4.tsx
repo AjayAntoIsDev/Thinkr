@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 
 // @ts-ignore
-export const Question1 = ({ swiperRef }) => {
+export const Question4 = ({ swiperRef }) => {
   const goToNextSlide = () => {
     if (swiperRef.current) {
       swiperRef.current.slideNext();
