@@ -7,7 +7,7 @@ import { Question1 } from './questions/Question1.tsx';
 import { Question2 } from '@/questions/Question2.tsx';
 import { Question3 } from '@/questions/Question3.tsx';
 import { Question4 } from '@/questions/Question4.tsx';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Question5 } from '@/questions/Question5.tsx';
 import { Question6 } from '@/questions/Question6.tsx';
 import { Question7 } from '@/questions/Question7.tsx';
@@ -26,6 +26,7 @@ let questions: { [key: string]: string } = {
 const App = () => {
 
   const swiperRef = useRef(null);
+  const [onFinal,setOnFinal] = useState(false);
   return (
     <div className={'flex h-screen w-screen flex-col bg-surface-a0 text-white'}>
       <div className={'absolute left-0 right-0'}>
@@ -75,10 +76,10 @@ const App = () => {
             <Question6 swiperRef={swiperRef} questions={questions}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Question7 swiperRef={swiperRef} questions={questions}/>
+            <Question7 swiperRef={swiperRef} questions={questions}  setOnFinal={setOnFinal}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Final questions={questions}/>
+            <Final questions={questions} onFinal={onFinal}/>
           </SwiperSlide>
         </Swiper>
       </div>

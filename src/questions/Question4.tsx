@@ -25,7 +25,7 @@ export const Question4 = ({ swiperRef,questions }) => {
         className={
           'mt-12 flex items-center justify-center gap-2 rounded-lg bg-primary-a30 p-2 px-5 text-2xl font-semibold text-surface-a0 disabled:cursor-not-allowed disabled:opacity-40'
         }
-        onClick={() =>{goToNextSlide();questions["question4"]=inputValue}}
+        onClick={() =>{goToNextSlide();questions["Something I’m really good at is"]=inputValue}}
         disabled={!inputValue.trim()}
       >
         Next <ArrowRight strokeWidth={'3px'} height={'26px'} width={'26px'} />

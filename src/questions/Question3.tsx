@@ -28,7 +28,7 @@ export const Question3 = ({ swiperRef,questions }) => {
           'mt-12 flex items-center justify-center gap-2 rounded-lg bg-primary-a30 p-2 px-5 text-2xl font-semibold text-surface-a0 disabled:cursor-not-allowed disabled:opacity-40'
         }
         disabled={!inputValue.trim()}
-        onClick={() =>{goToNextSlide();questions["question3"]=inputValue}}
+        onClick={() =>{goToNextSlide();questions["I have __ to spend on this project"]=inputValue}}
       >
         Next <ArrowRight strokeWidth={'3px'} height={'26px'} width={'26px'} />
       </button>

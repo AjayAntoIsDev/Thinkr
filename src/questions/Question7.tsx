@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 // @ts-ignore
-export const Question7 = ({ swiperRef ,questions}) => {
+export const Question7 = ({ swiperRef ,questions,setOnFinal}) => {
   const [inputValue, setInputValue] = useState('');
 
   const goToNextSlide = () => {
@@ -27,7 +27,7 @@ export const Question7 = ({ swiperRef ,questions}) => {
         className={
           'mt-12 flex items-center justify-center gap-2 rounded-lg bg-primary-a30 p-2 px-5 text-2xl font-semibold text-surface-a0 disabled:cursor-not-allowed disabled:opacity-40'
         }
-        onClick={() =>{goToNextSlide();questions["question7"]=inputValue;console.log(questions)}}
+        onClick={() =>{goToNextSlide();questions["I want the ideas to be"]=inputValue;console.log(questions);setOnFinal(true)}}
         disabled={!inputValue.trim()}
       >
         Next <ArrowRight strokeWidth={'3px'} height={'26px'} width={'26px'} />
