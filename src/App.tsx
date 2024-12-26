@@ -11,6 +11,7 @@ import { useRef } from 'react';
 import { Question5 } from '@/questions/Question5.tsx';
 import { Question6 } from '@/questions/Question6.tsx';
 import { Question7 } from '@/questions/Question7.tsx';
+import { Final } from '@/Final.tsx';
 
 let questions: { [key: string]: string } = {
   question1: '',
@@ -75,6 +76,9 @@ const App = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Question7 swiperRef={swiperRef} questions={questions}/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Final questions={questions}/>
           </SwiperSlide>
         </Swiper>
       </div>
